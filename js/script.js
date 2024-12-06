@@ -1,5 +1,7 @@
+// Select all sections on the page
 let sectionElements = document.querySelectorAll("section");
 
+// Create navigation menu items for each section
 function buildNavigation() {
     let navList = document.getElementById("nav-list");
     sectionElements.forEach(section => {
@@ -7,6 +9,7 @@ function buildNavigation() {
     });
 }
 
+// Create a navigation item with a link for a section
 function createNavItem(section) {
     let listItem = document.createElement("li");
     let anchor = document.createElement("a");
@@ -16,10 +19,12 @@ function createNavItem(section) {
     return listItem;
 }
 
+// Get the height of the header
 function getHeaderHeight() {
     return document.querySelector(".header-section").getBoundingClientRect().height;
 }
 
+// Highlight the section and link currently in view
 function updateActiveClass() {
     let sections = document.querySelectorAll("section");
     let navItems = document.querySelectorAll("#nav-list li");
@@ -46,6 +51,7 @@ function updateActiveClass() {
     });
 }
 
+// Scroll smoothly to a section when its navigation link is clicked
 function scrollToSection(index) {
     let sections = document.querySelectorAll("section");
     let rect = sections[index].getBoundingClientRect();
@@ -53,6 +59,7 @@ function scrollToSection(index) {
     window.scrollBy(0, scrollOffset);
 }
 
+// Add click events to the navigation items
 function setupNavigation() {
     let navItems = document.querySelectorAll("#nav-list li");
     navItems.forEach((item, index) => {
@@ -60,9 +67,10 @@ function setupNavigation() {
     });
 }
 
+// Build the navigation and set up functionality
 buildNavigation();
 setupNavigation();
 
+// Update active section and link when scrolling
 window.onscroll = updateActiveClass;
-
 updateActiveClass();

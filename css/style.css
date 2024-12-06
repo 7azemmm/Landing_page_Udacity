@@ -5,7 +5,7 @@ body {
     font-family: 'Merriweather', serif;
     color: #fff;
 }
-
+/* header-style*/
 .header-section {
     background: #fff;
     position: fixed;
@@ -48,7 +48,7 @@ body {
     color: #fff;
     transition: ease 0.3s all;
 }
-
+/* main styling */ 
 main {
     margin: 10vh 1em 10vh;
 }
@@ -65,6 +65,7 @@ h1 {
     margin: 2em 1rem;
 }
 
+/* specify margins on small screen */ 
 @media only screen and (min-width: 35em) {
     h1 {
         font-size: 7em;
@@ -83,6 +84,7 @@ section {
     text-align: left;
 }
 
+/* specify container width on small screen */ 
 @media only screen and (min-width: 35em) {
     .content-container {
         max-width: 50em;
